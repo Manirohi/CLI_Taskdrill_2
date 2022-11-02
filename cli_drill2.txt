@@ -1,0 +1,28 @@
+Download the contents of "Harry Potter and the Goblet of fire" using the command line from here
+sudo apt install  wget
+wget https://raw.githubusercontent.com/bobdeng/owlreader/master/ERead/assets/books/Harry%20Potter%20and%20the%20Goblet%20of%20Fire.txt
+Now  mv https://raw.githubusercontent.com/bobdeng/owlreader/master/ERead/assets/books/Harry%20Potter%20and%20the%20Goblet%20of%20Fire.txt Harrypotter  (change filename to Harrypotter)
+
+1 .Print the first three lines in the book
+	head -3 Harrypotter           head Top #3 lines in Harrypotter 
+
+2.Print the last 10 lines in the book
+	tail -10 Harrypotter         tail #bottom starting print from down to up in Harrypotter file
+	
+3.How many times do the following words occur in the book?
+Harry
+Ron
+Hermione
+Dumbledore
+
+	cat Harrypotter | grep "Harry" | wc -l
+	cat Harrypotter | grep "Ron" | wc -l
+	cat Harrypotter | grep "Hermione" | wc -l
+	cat Harrypotter | grep "Dumbledore" | wc -l
+
+4.Print lines from 100 through 200 in the book
+	
+	cat Harrypotter | head -200 | tail -101    
+  
+5.How many unique words are present in the book?
+	tr '  ' '/n'  < file_name | sort | uniq -c | wc -l 
